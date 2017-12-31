@@ -24,10 +24,11 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <form  onSubmit={this.onSubmit}>
-          <input value={this.state.term} onChange={this.onChange} />
-          <button>Submitt</button>
+          <h1>TO-DO LIST <span><button className="button-item">+</button></span> </h1>
+          <input className="input-item" value={this.state.term} onChange={this.onChange} placeholder='What are you going to do?' />
+          
         </form>
         <List items={this.state.items} />
       </div>
